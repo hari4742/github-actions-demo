@@ -4,8 +4,8 @@ jobs:
   first-job:
     runs-on: ubuntu-latest
     steps:
-      - name: Printing Hello World
-        run: echo 'Hello World!'
+      - name: Printing if config
+        run: ifconfig
       - name: Accessing Github Event Name
         run: echo "This step is part of the ${{github.event_name}} event"
       - name: Checking status
