@@ -9,7 +9,7 @@ jobs:
       - name: Accessing Github Event Name
         run: echo "This step is part of the ${{github.event_name}} event"
       - name: Checking status
-         run: echo "The job's status is ${{job.status}}"
+        run: echo "The job's status is ${{job.status}}"
       - name: OS Information
         run: echo "The job is running on the ${{runner.os}} server hosted by Github"
       - name: Check out our github repo
