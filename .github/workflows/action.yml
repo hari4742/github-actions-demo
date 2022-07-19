@@ -1,0 +1,23 @@
+name: demo-action
+on: [push]
+jobs:
+  first-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Printing Hello World
+      - run: echo 'Hello World!'
+      - name: Accessing Github Event Name
+      - run: echo "This step is part of the ${{github.event_name}} event"
+      - name: Checking status
+      - run: echo "The job's status is ${{job.status}}"
+      - name: OS Information
+      - run: echo "The job is running on the ${{runner.os}} server hosted by Github"
+      - name: Check out our github repo
+        uses: actions/checkout@v3
+      - run: echo "The git hub repo ${{github.repository}} has been cloned to the runner."
+      - name: Listing the files in the runner
+      - run: |
+        ls -alh
+        ls ${{github.workspace}}
+      - name: Checking status
+      - run: echo "The job's status is ${{job.status}}"
