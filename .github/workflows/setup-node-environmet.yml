@@ -11,4 +11,6 @@ jobs:
         with:
           node-version: 14
       - name: Running a file
-        run: node index.js
+        run: |
+          pwd
+          node index.js
