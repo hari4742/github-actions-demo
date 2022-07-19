@@ -10,9 +10,5 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 14
-      - name: Installing bats
-        run: npm install bats
-      - name: Version of bats
-        run: bats -v
       - name: Running a file
         run: node index.js
